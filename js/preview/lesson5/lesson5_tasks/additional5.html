@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // - Дано натуральное число n. Выведите все числа от 1 до n.
+
+    // let n = 12;
+    //
+    // let list = (n) => {
+    //
+    //     if (n < 0) {
+    //         for (let i = 1; i >= n; i--) {
+    //             console.log(i);
+    //         }
+    //     } else if(n>0){
+    //         for (let i = 1; i <= n; i++) {
+    //             console.log(i);
+    //         }
+    //     } else {
+    //         console.log(1);
+    //     }
+    //
+    // }
+    //
+    // list(n)
+
+    // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
+
+    let A = -10;
+    let B = -100;
+
+    let List = (a, b) => {
+
+        if (a > b) {
+
+            for (let i = b; i <= a; i++) {
+                console.log(i);
+            }
+        } else if (a < b) {
+            for (let i = a; i <= b; i++) {
+                console.log(i);
+            }
+        } else {
+            console.log('Числа рівні');
+        }
+
+
+    }
+
+    List(A, B)
+</script>
+</html>
