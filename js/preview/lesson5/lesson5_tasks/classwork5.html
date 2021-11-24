@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrExample = [232, 312, 32, 32, 321, 321, 321, 321, 323, 123, 23, 23, 23]
+
+    // Всі функції повинні бути описані стрілочним типом, та selfinvoke!!!!
+    // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
+
+    // let Max = function (n1, n2, n3) {
+    //     let max = n1;
+    //     if(n2>max){
+    //         max=n2;
+    //     } else if (n3>max){
+    //         max = n3
+    //     }
+    //
+    //     return max
+    // }(1, 23, 4)
+    //
+    // console.log(Max);
+
+    //     - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
+
+    // let Min = function (n1, n2, n3) {
+    //     let min = n1;
+    //     if (n2 < min) {
+    //         min = n2;
+    //     } else if (n3 < min) {
+    //         min = n3
+    //     }
+    //
+    //     return min
+    // }(1, -23, 4);
+    //
+    // console.log(Min);
+
+    // - створити функцію яка повертає найбільше число з масиву
+    // - створити функцію яка повертає найменьше число з масиву
+
+    // let Min = (x, y, z) => {
+    //     let arr = [x, y, z];
+    //     let max = arr[0];
+    //     let min = arr[0]
+    //
+    //     for (let i of arr) {
+    //         if (i > max) max = i;
+    //         if (i < min) min = i;
+    //     }
+    //     console.log('Min =>', min);
+    //     console.log('Max =>', max);
+    //
+    // }
+    //
+    // Min(100, 2, -3);
+
+    // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
+
+    // let SumArr = (arr) => {
+    //     let sum = 0;
+    //     for (let i = 0; i < arr.length; i++) {
+    //         sum += arr[i]
+    //     }
+    //     console.log(sum);
+    // }
+    //
+    // SumArr(arrExample)
+
+    // - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
+
+    // let SumArr = (arr) => {
+    //     let sum = 0;
+    //     for (let i = 0; i < arr.length; i++) {
+    //         sum += arr[i]
+    //     }
+    //     console.log(sum/arr.length);
+    // }
+    //
+    // SumArr(arrExample)
+
+    // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+
+    // let Item = function () {
+    //     let max = arguments[0];
+    //     let min = arguments[0];
+    //     for (let i of arguments) {
+    //         if (i > max) max = i;
+    //         if (i < min) min = i;
+    //     }
+    //     console.log(max);
+    //     return min
+    // }(21, 32, 33, 2, 32, 321, 321, 3, 3)
+    //
+    // console.log(Item);
+
+    // - створити функцію яка заповнює масив рандомними числами
+    // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
+
+    // let arr = [];
+    //
+    // let RandArr = (arr, n) => {
+    //
+    //     for (let i=0; i<n; i++) {
+    //         arr[i] = Math.round(Math.random() * 100)
+    //         console.log(arr[i]);
+    //     }
+    // }
+    //
+    // RandArr(arr, 10)
+
+
+    // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+
+    // let arr = [];
+    // let limit = 100
+    //
+    // let RandArr = (arr, limit) => {
+    //
+    //     for (let i=0; i<limit; i++) {
+    //         arr[i] = Math.round(Math.random() * 100)
+    //         console.log(arr[i]);
+    //     }
+    // }
+    //
+    // RandArr(arr, limit)
+
+    // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+    let reserveArr = [];
+    let reserve = function (arr) {
+        console.log(arr);
+        for (let i = arr.length - 1; i >= 0; i--) {
+            reserveArr.push(arr[i])
+        }
+        return reserveArr
+    }(arrExample);
+
+    console.log(reserve);
+
+
+</script>
+</html>
