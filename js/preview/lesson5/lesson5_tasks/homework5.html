@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Всі функції повинні бути описані стрілочним типом, та selfinvoke!!!!
+    //     - створити функцію яка обчислює та повертає площу прямокутника висотою
+
+    // let STrk = (a, b) => a * b;
+    // console.log(STrk(12, 12));
+
+    // - створити функцію яка обчислює та повертає площу кола
+
+    // let Sr = (r) => Math.PI * Math.pow(r, 2);
+    // console.log(Sr(4));
+
+    // - створити функцію яка обчислює та повертає площу циліндру
+
+    // let Scylinder = (r,h)=> (2 * Math.PI* Math.pow(r,2))  + (2* Math.PI*r*h);
+    // console.log(Scylinder(4, 5));
+
+    // - створити функцію яка приймає масив та виводить кожен його елемент
+
+    let arrExample = [21, 2, false, 'eqrwe', 32, 'rewrwe', 32, true, 32, 32, 3]
+
+    // let Arr = (arr) => console.log(arr);
+    // Arr(arrExample)
+
+    // - створити функцію яка  створює параграф з текстом. Текст задати через аргумент
+
+    let textExample = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolore earum eos expedita facere laudantium maxime non perferendis, possimus tempore! Commodi facilis laborum nemo non quis rem similique tempore tenetur!';
+
+    // let Text = (t) => document.write(`<ul>${t}</ul>`) ;
+    // Text(textExample)
+
+    // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+
+    // let TextUl = (tul) => document.write(`<ul><li>${tul}</li><li>${tul}</li><li>${tul}</li></ul>`) ;
+    // TextUl(textExample)
+
+    // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+
+    // let TextUl = (tul, n) => {
+    //     for (let i = 0; i < n; i++) {
+    //         document.write(`<ul><li>${tul}</li></ul>`)
+    //     }
+    // };
+    // TextUl(textExample, 4)
+
+    // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
+    // let ArrList = (arr) => {
+    //     for(let i=0; i<arr.length; i++){
+    //         document.write(`<ul><li>${arr[i]}</li></ul>`)
+    //     }
+    // } ;
+    // ArrList(arrExample)
+
+    // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+
+    let Arr = [
+        {
+            id: 1,
+            name: 'Anna',
+            age: 15
+        }, {
+            id: 1,
+            name: 'Anna',
+            age: 15
+        }, {
+            id: 1,
+            name: 'Anna',
+            age: 15
+        }, {
+            id: 1,
+            name: 'Anna',
+            age: 15
+        },
+    ]
+
+    let ArrBlock = (arr) => {
+        for (let i=0; i<arr.length; i++){
+            document.write(`<ul><div>${arr[i].id}</li></ul>`)
+            document.write(`<ul><div>${arr[i].name}</li></ul>`)
+            document.write(`<ul><div>${arr[i].age}</li></ul>`)
+        }
+    }
+
+    ArrBlock(Arr)
+
+</script>
+</html>
