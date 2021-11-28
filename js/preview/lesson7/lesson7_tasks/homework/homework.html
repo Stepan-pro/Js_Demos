@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+
+    function User(id, name, surname, email, phone) {
+        this.id = id
+        this.name = name
+        this.surname = surname
+        this.email = email
+        this.phone = phone
+    }
+
+    let x1 = new User(3, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    let x2 = new User(2, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    let x3 = new User(1, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    let x4 = new User(4, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    let x5 = new User(5, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    let x6 = new User(8, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    let x7 = new User(7, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    let x8 = new User(6, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    let x9 = new User(65, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    let x10 = new User(63, 'Anna', 'dasds', 'sadsdsd@gfgf.gfg', '03665466466');
+    // створити пустий масив, наповнити його 10 об'єктами new User(....)
+
+    let X = [x1, x2, x3, x4, x5, x6, x7, x8, x9, x10]
+    console.log(X);
+
+    // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+
+    let filterId = function (x) {
+        return x.id % 2 === 0
+    }
+    console.log(X.filter(filterId));
+
+    // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+
+    let sortId = function (a, b) {
+        if (a.id > b.id) return 1
+        if (a.id < b.id) return -1
+        return 0
+    }
+    console.log(X.sort(sortId));
+
+    // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+
+    class Client {
+        constructor(id, name, surname , email, phone, order) {
+            this.id = id
+            this.name = name
+            this.surname = surname
+            this.email = email
+            this.phone = phone
+            this.order = order
+
+        }
+
+    }
+    let user10 = new Client(20,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d','sd','sad'])
+    let user11 = new Client(21,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d','sd','sad','as','dsa','ds'])
+    let user12 = new Client(22,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d','sd','sad','as'])
+    let user13 = new Client(23,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d'])
+    let user14 = new Client(24,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d','sd','sad'])
+    let user15 = new Client(25,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s'])
+    let user16 = new Client(26,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d','sd','sad','as','dsa','ds'])
+    let user17 = new Client(27,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d','sd','sad','as'])
+    let user18 = new Client(28,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d','sd','sad','as','dsa'])
+    let user19 = new Client(29,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d','sd','sad',])
+    let user20 = new Client(299,'sdas','dasdas','dasdsad@fdsfd.fds', 454646, ['s','das','d','sd'])
+
+    // створити пустий масив, наповнити його 10 об'єктами Client
+
+    let ArrUsers = [user10,user11,user12,user13,user14,user15,user16,user17,user18,user19,user20];
+
+    // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+
+    let sortOrder = function (a,b){
+        if (a.order.length > b.order.length) return 1
+        if (a.order.length < b.order.length) return -1
+        return 0
+    }
+
+    console.log(ArrUsers.sort(sortOrder));
+
+
+</script>
+</html>
