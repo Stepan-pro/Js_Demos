@@ -20,37 +20,110 @@
     // let n2 = 'Ron Whisley'
     // let n3 = 'Hermione Granger'
 
-    let validName = (n1)=> {
-        console.log(n1.replace('..', ' '));
-
-
-    }
-    validName(n1)
+    // let validName = (n1)=> {
+    //     console.log(n1.replace('..', ' '));
+    //
+    //
+    // }
+    // validName(n1)
 
     //     - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+
+    let arr = []
+
+    let RandomArr = function (arr) {
+        for (let i = 0; i < 15; i++) {
+            arr[i] = Math.round(Math.random() * 100)
+        }
+        return arr
+    }(arr)
+    console.log(RandomArr);
+
     // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
+
+    let Sort = function () {
+        RandomArr.sort((a, b) => a - b)
+        console.log(RandomArr);
+    }
+
+    Sort()
+
     // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа
+
+    let pairElement = (element) => {
+        return element % 2 === 0
+    }
+
+    let pair = RandomArr.filter(pairElement);
+    console.log(pair);
+
+
     // - створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції) . за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
+
+    let elementString = function (el) {
+        return [`$${el}`].join(" ")
+    }
+
+    let stringArr = RandomArr.map(elementString)
+    console.log(stringArr);
+
     // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
-    //     let nums = [11,21,3];
+    let nums = [11, 21, 3];
+    console.log(nums);
     // sortNums('ascending') // [3,11,21]
     // sortNums('descending') // [21,11,3]
-    //
-    //
+
+    let sort = function (arr, direction) {
+        if (direction === 'ascending') {
+            arr.sort((a, b) => a - b)
+            console.log(direction);
+        } else if (direction === 'descending') {
+            arr.sort((a, b) => b - a)
+            console.log(direction);
+        }
+        return arr
+    }(nums, 'ascending')
+    console.log(sort);
+
     // - є масив
-    // let coursesAndDurationArray = [
-    //     {title: 'JavaScript Complex', monthDuration: 5},
-    //     {title: 'Java Complex', monthDuration: 6},
-    //     {title: 'Python Complex', monthDuration: 6},
-    //     {title: 'QA Complex', monthDuration: 4},
-    //     {title: 'FullStack', monthDuration: 7},
-    //     {title: 'Frontend', monthDuration: 4}
-    // ];
+    let coursesAndDurationArray = [
+        {title: 'JavaScript Complex', monthDuration: 5},
+        {title: 'Java Complex', monthDuration: 6},
+        {title: 'Python Complex', monthDuration: 6},
+        {title: 'QA Complex', monthDuration: 4},
+        {title: 'FullStack', monthDuration: 7},
+        {title: 'Frontend', monthDuration: 4}
+    ];
+
     // -- відсортувати його за спаданням за monthDuration
+
+    let descending = (a, b) => {
+        if (a.monthDuration > b.monthDuration) return 1
+        if (a.monthDuration < b.monthDuration) return -1
+        return 0
+    }
+
+    console.log(coursesAndDurationArray.sort(descending));
+
+
     // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
-    //
+
+    let filter = (num) => {
+        return num.monthDuration > 5
+    }
+    console.log(coursesAndDurationArray.filter(filter));
+
     // - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
-    // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
+    // // [нас,лаж,ден,ие]
+    let str = 'fdsfsdfsdfsdfsdfsdf';
+    let cutString = function (str, n) {
+        let res = [];
+        for (let i = 0; i < str.length; i += n) {
+            res.push(str.substr(i, n));
+        }
+        return res
+    }
+    document.writeln(cutString('наслаждение',3))
 
 </script>
 </html>
