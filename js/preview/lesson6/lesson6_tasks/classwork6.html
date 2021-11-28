@@ -20,12 +20,14 @@
     // let n2 = 'Ron Whisley'
     // let n3 = 'Hermione Granger'
 
-    // let validName = (n1)=> {
-    //     console.log(n1.replace('..', ' '));
-    //
-    //
-    // }
-    // validName(n1)
+    let Name = function (n) {
+        return n
+            .replaceAll('..', ' ')
+            .replaceAll('---', ' ')
+            .replaceAll('__', ' ')
+    }(n2)
+
+    console.log(Name);
 
     //     - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
 
@@ -123,7 +125,7 @@
         }
         return res
     }
-    document.writeln(cutString('наслаждение',3))
+    document.writeln(cutString('наслаждение', 3))
 
 </script>
 </html>
