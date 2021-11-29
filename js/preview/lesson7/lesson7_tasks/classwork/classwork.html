@@ -71,55 +71,93 @@
     // -- changeYear (newValue) - змінює рік випуску на значення newValue
     // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
-    class Car {
-        constructor(model, producer, age, maxSpeed, vEngine) {
-            this.model = model
-            this.producer = producer
-            this.age = age
-            this.maxSpeed = maxSpeed
-            this.vEngine = vEngine
-        }
-
-        drive() {
-            document.writeln(`їдемо зі швидкістю ${this.maxSpeed} на годину<br><hr>`)
-        }
-
-        info() {
-            document.writeln(`model -  ${this.model}<br>`)
-            document.writeln(`producer -  ${this.producer}<br>`)
-            document.writeln(`age -  ${this.age}<br>`)
-            document.writeln(`maxSpeed -  ${this.maxSpeed}<br>`)
-            document.writeln(`vEngine -  ${this.vEngine}<br><hr>`)
-        }
-
-        increaseMaxSpeed(newSpeed) {
-            document.writeln(`newSpeed  -  ${newSpeed + this.maxSpeed}<br><hr>`)
-        }
-
-        changeYear(newValue) {
-            this.age = newValue
-            document.writeln(`newValue  -  ${this.age}<br><hr>`)
-        }
-
-        addDriver (name, year){
-            this.name = name
-            this.year = year
-
-        }
-    }
-
-    let car = new Car('M5', 'BMW', '2015', 300, 4.4, 'fvfv', 15)
-    console.log(car);
-    car.drive();
-    car.info();
-    car.increaseMaxSpeed(100);
-    car.changeYear(2016)
-    car.addDriver('dasdasd', 2020)
+    // class Car {
+    //     constructor(model, producer, age, maxSpeed, vEngine) {
+    //         this.model = model
+    //         this.producer = producer
+    //         this.age = age
+    //         this.maxSpeed = maxSpeed
+    //         this.vEngine = vEngine
+    //     }
+    //
+    //     drive() {
+    //         document.writeln(`їдемо зі швидкістю ${this.maxSpeed} на годину<br><hr>`)
+    //     }
+    //
+    //     info() {
+    //         document.writeln(`model -  ${this.model}<br>`)
+    //         document.writeln(`producer -  ${this.producer}<br>`)
+    //         document.writeln(`age -  ${this.age}<br>`)
+    //         document.writeln(`maxSpeed -  ${this.maxSpeed}<br>`)
+    //         document.writeln(`vEngine -  ${this.vEngine}<br><hr>`)
+    //     }
+    //
+    //     increaseMaxSpeed(newSpeed) {
+    //         document.writeln(`newSpeed  -  ${newSpeed + this.maxSpeed}<br><hr>`)
+    //     }
+    //
+    //     changeYear(newValue) {
+    //         this.age = newValue
+    //         document.writeln(`newValue  -  ${this.age}<br><hr>`)
+    //     }
+    //
+    //     addDriver (name, year){
+    //         this.name = name
+    //         this.year = year
+    //
+    //     }
+    // }
+    //
+    // let car = new Car('M5', 'BMW', '2015', 300, 4.4, 'fvfv', 15)
+    // console.log(car);
+    // car.drive();
+    // car.info();
+    // car.increaseMaxSpeed(100);
+    // car.changeYear(2016)
+    // car.addDriver('dasdasd', 2020)
 
     // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
     // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
     //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
     //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 
+
+    class Princes {
+        constructor(name, age, size) {
+            this.name = name
+            this.age = age
+            this.size = size
+        }
+    }
+
+    let princes = new Princes('sadas', 12, 69)
+    let princes1 = new Princes('sadas', 12, 25)
+    let princes2 = new Princes('sadas', 12, 25)
+    let princes3 = new Princes('sadas', 12, 69)
+    let princes4 = new Princes('sadas', 12, 3)
+    let princes5 = new Princes('sadas', 12, 69)
+    let princes6 = new Princes('sadas', 12, 4)
+    let princes7 = new Princes('sadas', 12, 4)
+    let princes8 = new Princes('sadas', 12, 20)
+    let princes9 = new Princes('sadas', 12, 36)
+
+    let arrPrinces = [princes, princes1, princes2, princes3, princes4, princes5, princes6, princes7, princes8, princes9]
+
+    class Prince {
+        constructor(name, age, size) {
+            this.name = name
+            this.age = age
+            this.size = size
+        }
+    }
+
+    let prince = new Prince('dasda', 2020, 36)
+
+    let Love = (pr)=>{
+       return pr.size === prince.size
+    }
+
+    let r = arrPrinces.find(Love);
+    console.log(r);
 </script>
 </html>
