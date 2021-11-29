@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+
+    // function Car(model, producer, age, maxSpeed, vEngine) {
+    //
+    //     this.model = model
+    //     this.producer = producer
+    //     this.age = age
+    //     this.maxSpeed = maxSpeed
+    //     this.vEngine = vEngine
+    //     this.drive = function drive() {
+    //         document.writeln(`їдемо зі швидкістю ${maxSpeed} на годину<br><hr>`)
+    //     }
+    //     this.info = function () {
+    //         document.writeln(`model -  ${model}<br>`)
+    //         document.writeln(`producer -  ${producer}<br>`)
+    //         document.writeln(`maxSpeed -  ${maxSpeed}<br>`)
+    //         document.writeln(`vEngine -  ${vEngine}<br><hr>`)
+    //     }
+    //
+    //     this.increaseMaxSpeed = function (newSpeed) {
+    //         document.writeln(`newSpeed  -  ${newSpeed + maxSpeed}<br><hr>`)
+    //     }
+    //
+    //     this.changeYear = function (newValue) {
+    //
+    //         this.age = newValue
+    //         document.writeln(`newValue  -  ${this.age}<br><hr>`)
+    //     }
+    //
+    //     this.driver = function (name, year) {
+    //         this.name = name
+    //         this.year = year
+    //     }
+    // }
+    //
+    //
+    // let BMW = new Car('M5', 'BMW', '2015', 300, 4.4, 'fvfv', 15)
+    // console.log(BMW);
+    // BMW.drive();
+    // BMW.info();
+    // BMW.increaseMaxSpeed(100)
+    // BMW.changeYear(2018)
+    // BMW.driver('vasia', 2015)
+
+
+    // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+    // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+    // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+    // -- changeYear (newValue) - змінює рік випуску на значення newValue
+    // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+
+    // - (Те саме, тільки через клас)
+    // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+    // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+    // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+    // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+    // -- changeYear (newValue) - змінює рік випуску на значення newValue
+    // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+
+    class Car {
+        constructor(model, producer, age, maxSpeed, vEngine) {
+            this.model = model
+            this.producer = producer
+            this.age = age
+            this.maxSpeed = maxSpeed
+            this.vEngine = vEngine
+        }
+
+        drive() {
+            document.writeln(`їдемо зі швидкістю ${this.maxSpeed} на годину<br><hr>`)
+        }
+
+        info() {
+            document.writeln(`model -  ${this.model}<br>`)
+            document.writeln(`producer -  ${this.producer}<br>`)
+            document.writeln(`age -  ${this.age}<br>`)
+            document.writeln(`maxSpeed -  ${this.maxSpeed}<br>`)
+            document.writeln(`vEngine -  ${this.vEngine}<br><hr>`)
+        }
+
+        increaseMaxSpeed(newSpeed) {
+            document.writeln(`newSpeed  -  ${newSpeed + this.maxSpeed}<br><hr>`)
+        }
+
+        changeYear(newValue) {
+            this.age = newValue
+            document.writeln(`newValue  -  ${this.age}<br><hr>`)
+        }
+
+        addDriver (name, year){
+            this.name = name
+            this.year = year
+
+        }
+    }
+
+    let car = new Car('M5', 'BMW', '2015', 300, 4.4, 'fvfv', 15)
+    console.log(car);
+    car.drive();
+    car.info();
+    car.increaseMaxSpeed(100);
+    car.changeYear(2016)
+    car.addDriver('dasdasd', 2020)
+
+    // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+    // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+    //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+    //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+</script>
+</html>
