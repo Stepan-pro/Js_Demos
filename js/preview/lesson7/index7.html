@@ -48,57 +48,57 @@
     // user.getFullName();
 
 
-    // function User(username, age, skills) {
-    //     this.username = username;
-    //     this.age = age;
-    //     this.greeting = function (msg) {
-    //         return `${msg} my name is ${this.username}`
-    //     };
-    //     this.skills = skills;
+    function User(username, age, skills) {
+        this.username = username;
+        this.age = age;
+        this.greeting = function (msg) {
+            return `${msg} my name is ${this.username}`
+        };
+        this.skills = skills;
+    }
+
+    let user1 = new User('vaysa', 31, ['java', 'js', 'html']);
+    console.log(user1);
+
+    let user2 = new User('petya', 33, [1, 2, 3]);
+    console.log(user2);
+    console.log(user1.greeting('hi'));
+    console.log(user2.greeting('hellou'));
+    console.log(user1.skills[2]);
+
+    // class User {
+    //
+    //     constructor(username, age) {
+    //         this.username = username;
+    //         this.age = age;
+    //     }
+    //
+    //     greeting() {
+    //         return 'hello my name is ' + this.username;
+    //
+    //     }
+    //
     // }
     //
-    // let user1 = new User('vaysa', 31, ['java', 'js', 'html']);
-    // console.log(user1);
+    // let user = new User('kokos', 1111);
+    // console.log(user)
+    // console.log(user.greeting());
     //
-    // let user2 = new User('petya', 33, [1, 2, 3]);
-    // console.log(user2);
-    // console.log(user1.greeting('hi'));
-    // console.log(user2.greeting('hellou'));
-    // console.log(user1.skills[2]);
-
-    class User {
-
-        constructor(username, age) {
-            this.username = username;
-            this.age = age;
-        }
-
-        greeting() {
-            return 'hello my name is ' + this.username;
-
-        }
-
-    }
-
-    let user = new User('kokos', 1111);
-    console.log(user)
-    console.log(user.greeting());
-
-    class SuperUser extends User {
-        constructor(username, age, status) {
-            super(username, age);
-            this.status = status;
-        }
-
-        greeting() {
-            return 'hello ';
-
-        }
-    }
-
-    let superUser = new SuperUser('abrikos', 123, true);
-    console.log(superUser);
-    console.log(superUser.greeting());
+    // class SuperUser extends User {
+    //     constructor(username, age, status) {
+    //         super(username, age);
+    //         this.status = status;
+    //     }
+    //
+    //     greeting() {
+    //         return 'hello ';
+    //
+    //     }
+    // }
+    //
+    // let superUser = new SuperUser('abrikos', 123, true);
+    // console.log(superUser);
+    // console.log(superUser.greeting());
 
 
 </script>
