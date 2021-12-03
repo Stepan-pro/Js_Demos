@@ -46,6 +46,20 @@
 
         <script>
 			// Your awesome code here.....
+
+            let el = document.getElementsByTagName('div')
+            for (const elElement of el) {
+                console.log(elElement.className);
+            }
+            let arr  =[]
+
+            function fillArray(n, i) {
+                arr.push(n[i].className);
+                return arr.length < n.length ? fillArray(n, ++i, arr) : arr;
+            }
+
+            console.log(fillArray(el, 0, ));
+
         </script>
     </body>
 </html>
