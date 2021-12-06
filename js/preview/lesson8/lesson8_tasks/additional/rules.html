@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Fight Club</title>
-    </head>
-    <body>
-        <div id="content"></div>
-        <h1>Правила бойцовского клуба</h1>
-        <div id="wrap">
-            <div class="rules rule1">
-                <h2>Первое правило Бойцовского клуба.</h2>
-                <p>Никому не рассказывать о Бойцовском клубе.</p>
-            </div>
-            <div class="rules rule2">
-                <h2>Второе правило Бойцовского клуба.</h2>
-                <p>Никогда никому не рассказывать о Бойцовском клубе.</p>
-            </div>
-            <div class="rules rule3">
-                <h2>Третье правило Бойцовского клуба.</h2>
-                <p>В схватке участвуют только двое.</p>
-            </div>
-            <div class="rules rule4">
-                <h2>Четвертое правило Бойцовского клуба.</h2>
-                <p>Не более одного поединка за один раз.</p>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Fight Club</title>
+</head>
+<body>
+<div id="content"></div>
+<h1>Правила бойцовского клуба</h1>
+<div id="wrap">
+    <div class="rules rule1">
+        <h2>Первое правило Бойцовского клуба.</h2>
+        <p>Никому не рассказывать о Бойцовском клубе.</p>
+    </div>
+    <div class="rules rule2">
+        <h2>Второе правило Бойцовского клуба.</h2>
+        <p>Никогда никому не рассказывать о Бойцовском клубе.</p>
+    </div>
+    <div class="rules rule3">
+        <h2>Третье правило Бойцовского клуба.</h2>
+        <p>В схватке участвуют только двое.</p>
+    </div>
+    <div class="rules rule4">
+        <h2>Четвертое правило Бойцовского клуба.</h2>
+        <p>Не более одного поединка за один раз.</p>
+    </div>
 
-            <div class="rules rule5">
-                <h2>Пятое правило Бойцовского клуба.</h2>
-                <p>Бойцы сражаются без обуви и голые по пояс.</p>
-            </div>
-            <div class="rules rule6">
-                <h2>Шестое правило Бойцовского клуба.</h2>
-                <p>Поединок продолжается столько, сколько потребуется.</p>
-            </div>
-            <div class="rules rule7">
-                <h2>Седьмое правило Бойцовского клуба.</h2>
-                <p>Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок
-                    окончен.</p>
-            </div>
-            <div class="rules rule8">
-                <h2>Восьмое и последнее правило Бойцовского клуба.</h2>
-                <p>Новичок обязан принять бой.</p>
-            </div>
-        </div>
+    <div class="rules rule5">
+        <h2>Пятое правило Бойцовского клуба.</h2>
+        <p>Бойцы сражаются без обуви и голые по пояс.</p>
+    </div>
+    <div class="rules rule6">
+        <h2>Шестое правило Бойцовского клуба.</h2>
+        <p>Поединок продолжается столько, сколько потребуется.</p>
+    </div>
+    <div class="rules rule7">
+        <h2>Седьмое правило Бойцовского клуба.</h2>
+        <p>Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок
+            окончен.</p>
+    </div>
+    <div class="rules rule8">
+        <h2>Восьмое и последнее правило Бойцовского клуба.</h2>
+        <p>Новичок обязан принять бой.</p>
+    </div>
+</div>
 
-        <script>
-			// Your awesome code here.....
+<script>
+    // Your awesome code here.....
 
-            let el = document.getElementsByTagName('div')
-            // for (const elElement of el) {
-            //     console.log(elElement.className);
-            // }
-            let arr  =[]
+    let el = document.getElementsByTagName('div')
+    let arr = []
 
-            function fillArray(n, i) {
-                arr.push(n[i].className);
-                return arr.length < n.length ? fillArray(n, ++i, arr) : arr;
-            }
+    function fillArray(n, i) {
+        if (arr.length > n.length) {
+            return arr
+        } else if (n[i].className.length) {
+            arr.push(n[i].classList.item(0))
+            arr.push(n[i].classList.item(1))
+            return fillArray(n, ++i, arr)
+        }
+        return fillArray(n, ++i, arr)
+    }
+    console.log(fillArray(el, 0));
 
-            console.log(fillArray(el, 0, ));
-
-        </script>
-    </body>
+</script>
+</body>
 </html>
