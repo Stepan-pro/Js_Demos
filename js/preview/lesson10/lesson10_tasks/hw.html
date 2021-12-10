@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+</body>
+<script>
+
+
+    // - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
+    //
+
+    // let btn  = document.createElement('button')
+    // let text =  document.createElement('div')
+    // btn.innerText  = 'click'
+    // text.innerText = 'text'
+    //
+    // btn.onclick =  function (){
+    //     return text.style.display='none'
+    // }
+    //
+    // document.body.appendChild(text)
+    // document.body.appendChild(btn)
+
+
+    //     - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
+
+    // let btn = document.createElement('button')
+    // btn.innerText = 'click me'
+    // btn.onclick=function () {
+    //     return btn.style.display='none'
+    // }
+    //
+    // document.body.appendChild(btn)
+
+    //
+    // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+
+    let input = document.createElement('input')
+    let btn = document.createElement('button')
+
+    btn.innerText = 'click'
+
+    btn.onclick = function () {
+        let div = document.createElement('div')
+
+        if(input.value<18){
+            alert('Small')
+        } else {
+            div.textContent = input.value
+        }
+
+
+        document.body.appendChild(div)
+    }
+
+    document.body.appendChild(input)
+    document.body.appendChild(btn)
+
+
+    // - Создайте меню, которое раскрывается/сворачивается при клике
+    //
+    // let div = document.createElement('div')
+    // let button = document.createElement('button')
+    // let buttonHide = document.createElement('button')
+    // let ul = document.createElement('ul')
+    // let li = document.createElement('li')
+    // let li1 = document.createElement('li')
+    // let li2 = document.createElement('li')
+    //
+    // div.classList.add('menu')
+    // button.classList.add('title')
+    //
+    // button.innerText = '___menu___'
+    // buttonHide.innerText='hide menu'
+    //
+    // li.innerText= 'menu 1'
+    // li1.innerText= 'menu 2'
+    // li2.innerText= 'menu 3'
+    //
+    // ul.style.display = 'none'
+    // buttonHide.style.display = 'none'
+    // button.style.display= 'block'
+    //
+    // button.onclick=function (){
+    //     ul.style.display = 'block'
+    //     buttonHide.style.display = 'block'
+    //     button.style.display = 'none'
+    // }
+    //
+    // buttonHide.onclick = function () {
+    //     ul.style.display = 'none'
+    //     buttonHide.style.display = 'none'
+    //     button.style.display = 'block'
+    // }
+    //
+    // document.body.appendChild(div)
+    // div.append(button, ul, buttonHide)
+    // ul.append(li, li1, li2)
+
+    //
+    // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
+    //     Вывести список комментариев в документ, каждый в своем блоке.
+    //     Добавьте каждому комментарию по кнопке для сворачивания его body.
+
+    // let arr = [{title: 'lorem', body: 'lorem ipsum dolo sit ameti'}, {
+    //     title: 'lorem',
+    //     body: 'lorem ipsum dolo sit ameti'
+    // }, {title: 'lorem', body: 'lorem ipsum dolo sit ameti'}, {
+    //     title: 'lorem',
+    //     body: 'lorem ipsum dolo sit ameti'
+    // }, {title: 'lorem', body: 'lorem ipsum dolo sit ameti'}, {
+    //     title: 'lorem',
+    //     body: 'lorem ipsum dolo sit ameti'
+    // }, {title: 'lorem', body: 'lorem ipsum dolo sit ameti'},
+    //     {title: 'lorem', body: 'lorem ipsum dolo sit ameti'}]
+    //
+    // for (const arrElement of arr) {
+    //     let div = document.createElement('div')
+    //     let h2 = document.createElement('h2')
+    //     let h3 = document.createElement('h3')
+    //     let btn = document.createElement('button')
+    //
+    //     h2.innerText = arrElement.title
+    //     h3.innerText = arrElement.body
+    //     btn.innerText = 'hide'
+    //
+    //     btn.onclick = function () {
+    //         div.style.display= 'none'
+    //     }
+    //
+    //     document.body.appendChild(div)
+    //     div.append(h2, h3, btn)
+    //
+    // }
+
+
+</script>
+</html>
