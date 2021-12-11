@@ -51,7 +51,7 @@
     btn.onclick = function () {
         let div = document.createElement('div')
 
-        if(input.value<18){
+        if (input.value < 18) {
             alert('Small')
         } else {
             div.textContent = input.value
@@ -142,5 +142,21 @@
     // }
 
 
+    let arr = [
+        {name: "width", value: 10},
+        {name: "height", value: 20}
+    ];
+    // треба написати функцію яка зробить таке    foo(arr) // -> { width: 10, height: 20 }
+
+
+    let foo = function (arr) {
+        let key = []
+        for (const arrElement of arr) {
+            key.push(Object.values(arrElement))
+        }
+        return Object.fromEntries(key)
+    }(arr)
+
+    console.log(foo);
 </script>
 </html>

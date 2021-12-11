@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .transforms {
+        transition: .4s all ease-in-out;
+    }
+</style>
+<body>
+</body>
+<script>
+    // - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
+    //     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
+    // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
+    //
+
+    // let form1 = document.createElement('form')
+    // let form2 = document.createElement('form')
+    // let inputForm1 = document.createElement('input')
+    // let input2Form1 = document.createElement('input')
+    // let inputForm2 = document.createElement('input')
+    // let input2Form2 = document.createElement('input')
+    // let btn = document.createElement('button')
+    //
+    // form1.action  = 'http://foo.com'
+    // form2.action  = 'http://foo.com'
+    // form1.method  = 'get'
+    // form2.method  = 'get'
+    //
+    // btn.textContent = 'click'
+    // inputForm1.name = 'inputForm1'
+    // input2Form1.name = 'input2Form1'
+    // inputForm2.name = 'inputForm2'
+    // input2Form2.name = 'input2Form2'
+    //
+    //
+    // btn.onclick = function () {
+    //
+    //     console.log(`form 1 - ${inputForm1.value} ${ input2Form1.value}`);
+    //     console.log(`form 2 - ${inputForm2.value} ${ input2Form2.value}`);
+    // }
+    //
+    // document.body.append(form1, form2, btn)
+    // form1.append(inputForm1, input2Form1)
+    // form2.append(inputForm2, input2Form2)
+
+
+    //
+    // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+    //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+    // (Додатковачастина для завдання)
+
+    // let inputHeight = document.createElement('input')
+    // let inputWight = document.createElement('input')
+    // let inputValue = document.createElement('input')
+    // let btn = document.createElement('button')
+    //
+    // btn.textContent = 'click'
+    // inputHeight.type = 'number'
+    // inputWight.type = 'number'
+    // btn.onclick = function Table() {
+    //     for (let i = 0; i < inputHeight.value; i++) {
+    //         let tr = document.createElement('tr')
+    //         document.body.append(tr)
+    //         for (let x = 0; x < inputWight.value; x++) {
+    //             let td = document.createElement('td')
+    //             td.style.width = '30px'
+    //             td.style.border = '1px solid black'
+    //             td.style.margin = '5px'
+    //             td.style.padding = '5px'
+    //             td.textContent = inputValue.value
+    //             tr.append(td)
+    //         }
+    //     }
+    // }
+    // document.body.append(inputValue, inputHeight, inputWight, btn)
+
+    //
+    //
+    // - Сворити масив не цензцрних слів.
+    //     Сворити інпут текстового типу.
+    //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
+    // кинути алерт з попередженням.
+    //     Перевірку робити при натисканні на кнопку
+
+    // let array = [225, 'orange', 'apple', 'orange', 'apple'];
+    //
+    // let input = document.createElement('input')
+    // let btn = document.createElement('button')
+    //
+    // btn.textContent = 'click'
+    // input.type = 'string'
+    //
+    // btn.onclick = function () {
+    //     for (const argument of array) {
+    //         console.log(argument);
+    //         if (argument === input.value) {
+    //             alert('bed')
+    //             return;
+    //         }
+    //     }
+    // }
+    //
+    // document.body.append(input, btn)
+
+    // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
+
+    let wrap = document.createElement('div')
+    let carousel_container = document.createElement('div')
+    let carousel_slide = document.createElement('div')
+    let btnWrap = document.createElement('div')
+    let btn_left = document.createElement('div')
+    let carousel_img = document.createElement('img')
+
+    carousel_img.classList.add('imgList')
+
+    carousel_img.alt = ' ';
+    carousel_img.style.width = '660px';
+
+    carousel_container.style.width = '660px'
+    carousel_container.style.margin = 'auto'
+    carousel_container.style.overflow = 'hidden'
+
+    carousel_img.style.display = 'block'
+    carousel_img.style.width = '100%'
+
+    carousel_slide.style.display = 'flex'
+    carousel_slide.style.height = '400px'
+
+    btnWrap.style.display = 'flex'
+    btnWrap.style.marginLeft = '50%'
+
+    btn_left.style.borderRadius = '50%'
+    btn_left.style.background = 'black'
+    btn_left.style.color = 'white'
+    btn_left.style.fontSize = '35px'
+    btn_left.style.cursor = 'pointer'
+    btn_left.style.outline = '0'
+    btn_left.style.width = '40px'
+    btn_left.style.height = '40px'
+    btn_left.style.paddingLeft = '10px'
+    btn_left.style.margin = '10px'
+
+    let carousel_img1 = carousel_img.cloneNode()
+    let carousel_img2 = carousel_img.cloneNode()
+    let btn_right = btn_left.cloneNode()
+
+    carousel_img1.src = 'https://cdn.serif.com/affinity/img/tutorials/photo-ipad/og-photo-ipad-tutorials-110920181402.jpg'
+    carousel_img.src = 'https://www.cnet.com/a/img/-qQkzFVyOPEoBRS7K5kKS0GFDvk=/940x0/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg'
+    carousel_img2.src = 'https://www.foleon.com/hubfs/Blogs/5%20sites%20for%20free%20stock%20photos/stockfoto.jpg'
+
+    btn_left.textContent = '<'
+    btn_right.textContent = '>'
+
+    let images = []
+    images.push(carousel_img)
+    images.push(carousel_img1)
+    images.push(carousel_img2)
+
+    let counter = 0;
+    const stepSize = '660';
+
+    carousel_slide.style.transform = 'translateX(' + `${-stepSize * counter}px)`;
+
+    btn_right.addEventListener('click', () => {
+        counter >= images.length - 1 ? counter = -1 : null;
+        carousel_slide.classList.add('transforms')
+        counter++;
+        carousel_slide.style.transform = 'translateX(' + `${-stepSize * counter}px)`;
+
+    })
+
+    btn_left.addEventListener('click', () => {
+        counter <= 0 ? counter = images.length : null;
+        carousel_slide.classList.add('transforms')
+        counter--;
+        carousel_slide.style.transform = 'translateX(' + `${-stepSize * counter}px)`;
+
+    })
+
+    document.body.appendChild(wrap)
+    wrap.append(carousel_container, btnWrap)
+    carousel_container.append(carousel_slide)
+    carousel_slide.append(carousel_img, carousel_img1, carousel_img2)
+    btnWrap.append(btn_left, btn_right)
+
+</script>
+</html>
